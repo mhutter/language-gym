@@ -1,0 +1,12 @@
+# just manual: https://github.com/casey/just/#readme
+
+_default:
+  @just --list
+
+# run clippy
+check:
+	cargo clippy --locked -- -D warnings
+
+# run unit tests
+test:
+	cargo test --locked
